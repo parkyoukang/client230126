@@ -1,49 +1,40 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        .title {
-            
-        }
-        .contanier {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100vw;
-            height: 100vh;
-        }
-
     </style>
 </head>
-
 <body>
-    <div class="title">
-        <h1>
-            정보처리기사 오답노트
-        </h1>
-        <p>
-            show 와 hide 버튼을 누르면서 공부해보세요.
-        </p>
-    </div>
-
-    <div class="contanier">
-        <div class="card" style="width: 300px; height:500px;">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
-    </div>
-
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-</body>
+    <script>
+    //변수명 작성 규칙
+    //영문대소문자, 숫자, _, $ 만 사용가능
+    const $ = 3;
+    console.log($);
+    let _ = 9;
+    console.log(_);
 
+    let hello = "hi";
+    let hello_ ="greeting"
+    let HELLO = "HOLA"
+
+    console.log(hello);
+    console.log(hello_);
+    console.log(HELLO);
+
+    //변수명 작성 관습
+    //lowerCamelCase : 소문자로 시작하고
+    // 여러단어가 조합될 경우 두번째이후 단어의 앞글자만 대문자
+    let car_name = "kia"; //관습에 어긋남
+    console.log(car_name);
+
+    let carName = "hyundai";//관습에 따름
+    console.log(carName);
+    </script>
+</body>
 </html>
