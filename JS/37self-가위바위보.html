@@ -26,6 +26,16 @@
             let com = parseInt(Math.random()*3); //0,1,2
             let user = p;
 
+            if (com === 0 ) {
+                document.querySelector("#com").textContent = "👌";
+            }
+            else if (com === 1 ) {
+                document.querySelector("#com").textContent = "✊";
+            }
+            else {
+                document.querySelector("#com").textContent = "🖐";
+            }
+
             let message = "";
             if (com === user) {
                 message = "비겼습니다."
