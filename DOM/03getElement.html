@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,25 +9,35 @@
     <style>
     </style>
 </head>
+
 <body>
+    <h1 id="head1">
+        브라우저에 출력되는 h1 element1
+    </h1>
+    <h1 id="head2">
+        브라우저에 출력되는 h1 element2
+    </h1>
+    <h1 id="head3">
+        브라우저에 출력되는 h1 element3
+    </h1>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-    //method: 객체가 가진 함수
-    let a = {
-        name: "kim",//객체가 가진 값(porperty)
-        age: 44,
-        drive: function() {
-            console.log("드라이브 함수 실행됨");//객체가 가진 함수(method)
+        //테그명으로 element 얻기(여러element들을 얻을수있음)
+        //여러element를 가진 데이터구조은? array, object->array로 사용 
+        let heads = document.getElementsByTagName("h1");
+        console.log(heads[0].textContent);
+        console.log(heads[1].textContent);
+        console.log(heads[2].textContent);
+
+        for (let i = 0; i < heads.length; i++) {
+             console.log(heads[i].textContent);
         }
-    };
 
-    console.log(a.name);//property를 호출
-    console.log(a.age);//property를 호출
+        heads[1].textContent = "HI JAVASCRIPT"
+        heads[2].remove();
 
-    a.drive();//method를 호출
-
-    console.log(a);//object자체를 호출
     </script>
 </body>
+
 </html>

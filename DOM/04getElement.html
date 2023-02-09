@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,25 +9,42 @@
     <style>
     </style>
 </head>
+
 <body>
+    <!-- h1#head$*4.note>lorem1 -->
+    <h1 id="head1" class="note">
+        노트 클래스 element1
+    </h1>
+    <h1 id="head2" class="note error">
+        노트 에러 클래스 element2
+    </h1>
+    <h1 id="head3" class="note error">
+        노트 에러 클래스 element3
+    </h1>
+    <h1 id="head4" class="note">
+        노트 클래스 element4
+    </h1>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-    //method: 객체가 가진 함수
-    let a = {
-        name: "kim",//객체가 가진 값(porperty)
-        age: 44,
-        drive: function() {
-            console.log("드라이브 함수 실행됨");//객체가 가진 함수(method)
+
+        let elems1 = document.getElementsByClassName("note");
+
+        for (let i = 0; i < elems1.length; i++) {
+            console.log(elems1[i].textContent);
         }
-    };
+    
+        let elemes2 = document.getElementsByClassName("error");
+        
+        for (let i = 0; i < elemes2.length; i++) {
+            console.log(elemes2[i].textContent);
+        }
+        
+        elemes2[1].textContent = "hello react";
 
-    console.log(a.name);//property를 호출
-    console.log(a.age);//property를 호출
 
-    a.drive();//method를 호출
 
-    console.log(a);//object자체를 호출
     </script>
 </body>
+
 </html>

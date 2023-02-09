@@ -9,24 +9,35 @@
     </style>
 </head>
 <body>
-
+    <h1 id="head1">
+        클래스가 없는 thml1
+    </h1>
+    <h1 id="head2" class="note">
+        note클래스인 html2
+    </h1>
+    <h1 id="head3" class="note">
+        note클래스인 html3
+    </h1>
+    <h1 id="head4">
+        클래스가 없는 thml4
+    </h1>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-    //method: 객체가 가진 함수
-    let a = {
-        name: "kim",//객체가 가진 값(porperty)
-        age: 44,
-        drive: function() {
-            console.log("드라이브 함수 실행됨");//객체가 가진 함수(method)
-        }
-    };
+    //css선택자문법을 string타입으로 파라미터로 받음
+    let heads = document.querySelectorAll("h1");
+    //여러가지니까 배열!
+    for (let i = 0; i<heads.length; i++) {
+        console.log(heads[i].textContent);
+    }
 
-    console.log(a.name);//property를 호출
-    console.log(a.age);//property를 호출
+    //note클래스인 요소의 객체를 dom에서 가져와서
+    //요소들의 textContent를 출력하기
+    //querySelectorAll 메소드 사용하기
+    let notes = document.querySelectorAll(".note");
 
-    a.drive();//method를 호출
-
-    console.log(a);//object자체를 호출
+    for (let i=0; i<notes.length; i++) {
+        console.log(notes[i].textContent);
+    }
     </script>
 </body>
 </html>

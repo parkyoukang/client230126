@@ -19,12 +19,37 @@
     }
 
     //함수식(function expression) 함수를 d에 할당 , 함수가 d의 값
+
+    //변수에 할당 가능
     let d = function (param) {
         //코드들
         console.log("함수식으로 작성된 함수 내 코드들 실행");
     }
-
     d();
+
+    //인수로 전달가능
+    function e(param) {
+
+    };
+    e(function () {
+        //명령문들..
+        //명령문들..
+    }); //e뒤에부터 함수식
+
+    //값으로 반환 가능
+    function f() {
+        return function() {
+            //실행코드들
+        }
+    };
+
+    //데이터구조에 저장 가능
+    let g = ["css", function() {/*실행코드들*/}];
+    let h = {
+        name: "park",
+        walk: function() {/*실행코드들*/}
+    };
+
     </script>
 </body>
 </html>

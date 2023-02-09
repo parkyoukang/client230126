@@ -18,14 +18,14 @@
         return 9;
     }
     a();//"a함수 실행 중.."
-    console.log(a());//"a함수 실행 중.. 9"
-    console.log(a);
+    console.log(a());//"a함수 실행 중.. 9" -> 실행한것을 출력해라
+    console.log(a);//a자체의 함수를 출력 -> a자체를 출력해라
 
 
-    // let b = a();
-    // console.log(b);
-    // console.log("또 다른 실행 코드들 실행");
-    // console.log("b에 저장된 값 활용",b);
+    let b = a();
+    console.log(b);
+    console.log("또 다른 실행 코드들 실행");
+    console.log("b에 저장된 값 활용",b);
 
     </script>
 </body>

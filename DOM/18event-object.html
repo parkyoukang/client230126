@@ -9,24 +9,36 @@
     </style>
 </head>
 <body>
+    <input type="text" id="input1" onkeyup="whichKey(event)">
+    <ul id="list1">
+        <li>
+            Lorem.
+        </li>
+        <li>
+            Voluptates?
+        </li>
+    </ul>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-    //method: 객체가 가진 함수
-    let a = {
-        name: "kim",//객체가 가진 값(porperty)
-        age: 44,
-        drive: function() {
-            console.log("드라이브 함수 실행됨");//객체가 가진 함수(method)
+    //14번과 유사한 일
+    //버튼 삭제하고
+    //텍스트 필드에서 엔터 입력시 목록에 추가되도록 만들기
+    function whichKey (e) {
+        if (e.key === "Enter") {          
+            //1.input의 velue를 얻기
+            let inputElem = document.querySelector("#input1");
+            let text = inputElem.value;
+            //2.새로운 li를 만들기
+            let list = document.createElement("li");
+            //3.새로운 li요소의 textcontent를 1에서 얻은 값으로 할당
+            list.textContent = text;
+            //4.list1의 요소 얻기
+            document.querySelector("#list1").append(list);
+            inputElem.value="";//입력하면 값 초기화
         }
-    };
+    }
 
-    console.log(a.name);//property를 호출
-    console.log(a.age);//property를 호출
-
-    a.drive();//method를 호출
-
-    console.log(a);//object자체를 호출
     </script>
 </body>
 </html>

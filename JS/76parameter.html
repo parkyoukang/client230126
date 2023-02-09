@@ -18,14 +18,14 @@
             console.log("파라미터 없는 함수");
         }
         a();
-        a(33);
+        a(33);//파라미터를 출력하지 않았기 때문에 의미가 없는 호출
 
         function b(param1, param2) {
             console.log("파라미터 2개 있는 함수");
             console.log(param1, param2);
         }
-        b();
-        b(99);
+        b();//undefined undefined
+        b(99);//99 undefined
         b(77, 88);//인수는 매개변수 순서에 맞게 들어감
 
         function printDouble(num) {
@@ -39,6 +39,7 @@
         function printSum(para1,para2) {
             let sum = para1 + para2;
             console.log(sum);
+            // console.log(para1+para2);
         }
         printSum(3,4);//7
         printSum(100,200);//300

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,25 +9,35 @@
     <style>
     </style>
 </head>
-<body>
 
+<body>
+    <h1 id="head1">
+        HTML 보임1
+    </h1>
+    <h1 id="head2" class="note">
+        HTML 보임2
+    </h1>
+    <h1 id="head3" class="'note">
+        HTML 보임3
+    </h1>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-    //method: 객체가 가진 함수
-    let a = {
-        name: "kim",//객체가 가진 값(porperty)
-        age: 44,
-        drive: function() {
-            console.log("드라이브 함수 실행됨");//객체가 가진 함수(method)
-        }
-    };
 
-    console.log(a.name);//property를 호출
-    console.log(a.age);//property를 호출
+        //querySelector 메소드 (css문법 사용)
+        let elem1 = document.querySelector("#head1");
+        console.log(elem1.textContent);
 
-    a.drive();//method를 호출
+        let elem2 = document.querySelector("#head2");
+        console.log(elem2.textContent);//
 
-    console.log(a);//object자체를 호출
+        let elem3 = document.querySelector(".note");
+        console.log(elem3.textContent);//HTML보임2
+
+        let elem4 = document.querySelector("h1");
+        console.log(elem4.textContent);//HTML보임1
+        console.log(elem4.id);//head1
+
     </script>
 </body>
+
 </html>

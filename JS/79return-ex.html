@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,27 +9,29 @@
     <style>
     </style>
 </head>
+
 <body>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-    //1~10 합, 1~100 합
-    function hap(num) {
-        let sum = 0;
-        for(let i=1; i<=num; i++) {
-            sum += i;
+        //1~10 합, 1~100 합
+        function hap(num) {
+            let sum = 0;
+            for (let i = 1; i <= num; i++) {
+                sum += i;
+            }
+            return sum;
         }
-        return sum;
-    }
-    let r1 = hap(10);
-    let r2 = hap(100);
+        let r1 = hap(10);
+        let r2 = hap(100);
 
-    console.log(r1);
-    console.log(r2);
-    console.log(hap(10));
-    console.log(hap(100));
+        console.log(r1);
+        console.log(r2);
+        console.log(hap(10));//변수선언없이 hap함수 출력하는데 10을 argument로!
+        console.log(hap(100));//변수선언없이 hap함수 출력하는데 100을 argument로!
 
 
     </script>
 </body>
+
 </html>

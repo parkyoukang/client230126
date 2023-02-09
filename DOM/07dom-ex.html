@@ -9,24 +9,26 @@
     </style>
 </head>
 <body>
+    <h1>
+        나의 반쪽을
+    </h1>
+    <h1>
+        붙여줘!!
+    </h1>
+
+    <div id="res"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-    //method: 객체가 가진 함수
-    let a = {
-        name: "kim",//객체가 가진 값(porperty)
-        age: 44,
-        drive: function() {
-            console.log("드라이브 함수 실행됨");//객체가 가진 함수(method)
-        }
-    };
+    let heads = document.querySelectorAll("h1");
 
-    console.log(a.name);//property를 호출
-    console.log(a.age);//property를 호출
+    let text="";
+    for(let i=0; i<heads.length; i++) {
+        text += heads[i].textContent;
+    }
+    document.querySelector("#res").textContent = text;
 
-    a.drive();//method를 호출
-
-    console.log(a);//object자체를 호출
+    
     </script>
 </body>
 </html>

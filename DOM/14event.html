@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,25 +9,39 @@
     <style>
     </style>
 </head>
-<body>
 
+<body>
+    <!-- input#input1+button[onclick]{추가}+ul#list1>li*2>lorem1 -->
+    <input type="text" id="input1">
+    <button onclick="addList();">추가</button>
+    <ul id="list1">
+        <li>
+            Lorem.
+        </li>
+        <li>
+            Consequatur!
+        </li>
+    </ul>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-    //method: 객체가 가진 함수
-    let a = {
-        name: "kim",//객체가 가진 값(porperty)
-        age: 44,
-        drive: function() {
-            console.log("드라이브 함수 실행됨");//객체가 가진 함수(method)
+
+        function addList() {
+            //1.#input1 의 value 얻기  
+            //2.새 li요소 만들고
+            //3.새 li요소의 textContent를 1에서 얻은 값으로 할당
+            //4.#list1 요소얻기
+            //5.4에서 얻은 요소에 2에서 만든 요소 append하기
+
+            let text = document.querySelector("#input1").value; //1
+            let list = document.createElement("li");//2
+            list.textContent = text;//3
+
+            //let ul = document.querySelector("#list1").append(list);//4, 5(ul.append(li);)
+            let ul = document.querySelector("#list1");//4
+            ul.append(list);//5
+
         }
-    };
-
-    console.log(a.name);//property를 호출
-    console.log(a.age);//property를 호출
-
-    a.drive();//method를 호출
-
-    console.log(a);//object자체를 호출
     </script>
 </body>
+
 </html>
