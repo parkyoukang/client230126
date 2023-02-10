@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,29 +8,30 @@
     <style>
     </style>
 </head>
-
 <body>
     <h1>
-        나의 반쪽을
+        Lorem.
     </h1>
     <h1>
-        붙여줘!!
+        Id?
     </h1>
-
-    <div id="res"></div>
+    <h1>
+        Perferendis.
+    </h1>
+    <button onclick="hideHeads();">숨기기</button>
+    <button onclick="showHeads();">보이기</button>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-        
-        let heads = document.querySelectorAll("h1");
+    function hideHeads() {
+        $("h1").hide(1000);
+    }
+    function showHeads() {
+        $("h1").show();
+    }
 
-        let text = "";
-        for (let i = 0; i < heads.length; i++) {
-            text += heads[i].textContent;
-        }
-        document.querySelector("#res").textContent = text;
-
+    //보여지게해보자
     </script>
 </body>
-
 </html>

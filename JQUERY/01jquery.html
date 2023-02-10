@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,29 +8,22 @@
     <style>
     </style>
 </head>
-
 <body>
-    <h1>
-        나의 반쪽을
-    </h1>
-    <h1>
-        붙여줘!!
-    </h1>
-
-    <div id="res"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-        
-        let heads = document.querySelectorAll("h1");
-
-        let text = "";
-        for (let i = 0; i < heads.length; i++) {
-            text += heads[i].textContent;
+    function $() {
+        return {
+            name: "son",
+            val: function() {
+                return "soccer";
+            }
         }
-        document.querySelector("#res").textContent = text;
+    }
+
+    console.log($().name);
+    console.log($().val());
 
     </script>
 </body>
-
 </html>

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,41 +8,33 @@
     <style>
     </style>
 </head>
-
 <body>
-    <!-- input#input1+ul#list1 -->
-    <input type="text" id="input1">
-    <ul id="list1"></ul>
-
-    <hr>
-    <!-- jquery를 사용할 element -->
-    <!-- input#input2+ul#list2 -->
-    <input type="text" id="input2">
-    <ul id="list2"></ul>
+    <!-- h1#head$*3>lorem1^p#para$*3>lorem -->
+    <h1 id="head1">
+        Lorem.
+    </h1>
+    <h1 id="head2">
+        Asperiores!
+    </h1>
+    <h1 id="head3">
+        Sint.
+    </h1>
+    <p id="para1">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates error ducimus earum impedit temporibus. Deleniti, velit, eaque nesciunt facilis debitis quis vero exercitationem illum omnis dolor quos molestias, ut commodi!
+    </p>
+    <p id="para2">
+        Doloribus deserunt nostrum a culpa delectus, vero repellat cumque illo repudiandae qui, beatae quo at ex impedit iste asperiores expedita dolore suscipit aliquid! Ab tempora ipsam fugit voluptate magnam quisquam!
+    </p>
+    <p id="para3">
+        Incidunt nisi sapiente laborum magni ipsa ex ratione illum, consequatur totam deleniti. Unde necessitatibus illo accusamus et sapiente sequi numquam! Amet consequatur ea magni quos alias, rerum labore sunt a!
+    </p>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-
-        //jquery
-        $("#input2").keyup(function (e) {
-            if (e.key === "Enter") {
-                $("#list2").append(`<li>${$(this).val()}</li>`)
-                $this.val("");
-            }
-        }); //코드가 더 간결해진걸 볼 수 있음 $가 많이 보이는데 $곧 jquery
-
-        //보통의 자바스크립트 코드(vanilla javascript)
-        document.querySelector("#input1").addEventListener("keyup", function (e) {
-            if (e.key === "Enter") {
-                let li = document.createElement("li");
-                li.textContent = this.value;
-                document.querySelector("#list1").append(li);
-                this.value = "";
-            }
-        });
+    $("#head1").hide(3000);//1개의 element
+    $("p").hide(5000);//여러개의 element
 
     </script>
 </body>
-
 </html>

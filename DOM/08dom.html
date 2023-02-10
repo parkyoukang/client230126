@@ -18,12 +18,12 @@
 
         let message = prompt("메세지를 입력하세요", "안녕하세요.");
         //let me = "ssss";
-        //let elem = document.querySelector("#head1");
+        let elem = document.querySelector("#head1");
         // let elem = document.getElementById("head1");
         //elem변수를 사용해서 브라우저에 나타나게할거야 
         //-> 그러면 document객체에서 메소드를 얻어와야지
-        //elem.textContent = message;
-        let elem = document.querySelector("#head1").textContent = message;
+        elem.textContent = message;//브라우저에 message를 가져와
+        //let elem = document.querySelector("#head1").textContent = message;
     </script>
 </body>
 

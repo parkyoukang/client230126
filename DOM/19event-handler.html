@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,6 +9,7 @@
     <style>
     </style>
 </head>
+
 <body>
     <!-- button#botton$*2{$버튼 클릭} -->
     <button id="button1" onclick="btnClick1();">1버튼 클릭</button>
@@ -16,20 +18,22 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
+        //event handler(listner) : 어떠한 이벤트가 발생했을 때 이를 처리하는 함수를 뜻함
         function btnClick1() {
             console.log("1버튼 클릭됨");
         }
 
         let btn2 = document.querySelector("#button2");//btn2의 변수에 담아서쓸꺼야
-        btn2.onclick = function() {
+        btn2.onclick = function () {
             console.log("2버튼 클릭됨");
         } //attribute말고 property로 사용하기
 
         let btn3 = document.querySelector("#button3");
-        btn3.addEventListener("click", function() {
+        btn3.addEventListener("click", function () {
             console.log("3버튼 클릭됨");
         });
 
     </script>
 </body>
+
 </html>
