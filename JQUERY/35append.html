@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,41 +8,34 @@
     <style>
     </style>
 </head>
-
 <body>
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Launch demo modal
-    </button>
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" id="saveButton" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-        </div>
+    <div id="res1">
+        Lorem.
     </div>
+    <div id="res2">
+        Iste!
+    </div>
+    <div id="res3">
+        Odit!
+    </div>
+    <div id="res4">
+        Odit!
+    </div> 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-    //모달에서 save changes의 버튼에 event를 줘보자
-    $("#exampleModal").on("shown.bs.modal", function() {
-        //console.log("모달보여짐");
-        $("#saveButton").fadeOut().fadeIn();
-    } );
+    $("#res1").append("world");
+    $("#res2").append("<h1>hi</h1>");
+
+    let h2element = document.createElement("h2");//vanlila javascript
+    h2element.textContent = "world"; //vanlila javascript
+    $("#res3").append(h2element);
+
+    let h3element = $("<h3>hello h3</h3>")//jquery
+    $("#res4").append(h3element);//jquery
+    h3element.slideUp(3000);
+
     </script>
 </body>
-
 </html>

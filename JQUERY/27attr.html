@@ -11,38 +11,35 @@
 </head>
 
 <body>
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Launch demo modal
-    </button>
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" id="saveButton" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    <a href="www.naver.com" id="link1" title="네이버 링크">
+        Lorem.
+    </a>
+    <br>
+    <a href="www.daum.com" id="link2" target="_blank">
+        Vero!
+    </a>
+    <br>
+    <a href="www.google.com" id="link3">
+        Architecto?
+    </a>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-    //모달에서 save changes의 버튼에 event를 줘보자
-    $("#exampleModal").on("shown.bs.modal", function() {
-        //console.log("모달보여짐");
-        $("#saveButton").fadeOut().fadeIn();
-    } );
+        let attr2 = $("#link2").attr("href");
+        console.log(attr2);
+
+        console.log($("#link1").attr("href"));
+        console.log($("#link3").attr("href"));
+
+        //#link1의 title속성값 출력
+        console.log($("#link1").attr("title"));
+        //#link1의 target속성값 출력
+        console.log($("#link2").attr("target"));
+        //없는 속성을 출력하라고 입력하면 undefined
+        console.log($("#link1").attr("target"));
+
+
     </script>
 </body>
 

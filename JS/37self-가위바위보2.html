@@ -11,38 +11,45 @@
 </head>
 
 <body>
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Launch demo modal
-    </button>
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" id="saveButton" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    <button id="button1" onclick="rps(0)">가위</button>
+    <button id="button2" onclick="rps(1)">바위</button>
+    <button id="button3" onclick="rps(2)">보</button>
+    <div>컴퓨터: <span id="com"></span> </div>
+    <div>결과는: <span id="res"></span> </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-    //모달에서 save changes의 버튼에 event를 줘보자
-    $("#exampleModal").on("shown.bs.modal", function() {
-        //console.log("모달보여짐");
-        $("#saveButton").fadeOut().fadeIn();
-    } );
+
+        function rps(play) {
+            let com = parseInt(Math.random() * 3);
+            let user = play;
+
+            $("#com").text(com);
+            if (com === 0) {
+                $("#com").text("가위");
+            } else if (com === 1) {
+                $("#com").text("바위");
+            } else {
+                $("#com").text("보");
+            }
+
+
+            let message = "";
+            if (user > com) {
+                message = "이겼습니다.";
+            } else if (user < com) {
+                message = "졌습니다.";
+            } else {
+                message = "비겼습니다."
+            }
+
+            $("#res").text(message);
+
+            console.log("com:", com);
+            console.log("user:", user);
+        }
+
     </script>
 </body>
 
